@@ -1,0 +1,45 @@
+/* ========================
+   Contenedor general Agenda
+   ======================== */
+.agenda-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 24px 40px;
+  background: #fafafa;
+  min-height: 100vh;
+}
+
+/* ========================
+   Grid de charlas
+   ======================== */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-top: 24px;
+}
+
+/* 2 columnas en pantallas medianas */
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 3 columnas en pantallas grandes */
+@media (min-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ========================
+   Estado vacío / mensajes
+   ======================== */
+.grid > .empty-msg {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #888;
+  font-size: 1rem;
+  padding: 40px 0;
+}

@@ -1,0 +1,108 @@
+/* ========================
+   Barra de filtros Agenda
+   ======================== */
+.af-wrap {
+  position: sticky;
+  top: 56px;                 /* debajo del header */
+  z-index: 40;
+  background: #fff;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 14px 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.af-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* input de búsqueda */
+.af-search {
+  flex: 1;
+  min-width: 220px;
+  border: 1px solid #ccc;
+  border-radius: 999px;
+  padding: 10px 16px;
+  background: #fafafa;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+.af-search:focus {
+  outline: none;
+  border-color: #ff6a00;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(255,106,0,0.15);
+}
+
+/* botones tipo chips */
+.chip {
+  border: 1px solid #ccc;
+  background: #fafafa;
+  padding: 8px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.92rem;
+  transition: all 0.2s ease;
+}
+.chip:hover {
+  background: #ff6a00;
+  color: #fff;
+  border-color: #ff6a00;
+}
+.chip-static {
+  cursor: default;
+  font-weight: 600;
+  background: #fff;
+}
+
+/* sección inferior con título y botones */
+.af-sub {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 6px;
+  padding-top: 6px;
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+.actions .btn {
+  border: 1px solid #ccc;
+  background: #fafafa;
+  padding: 8px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+.actions .btn:hover {
+  background: #ff6a00;
+  color: #fff;
+  border-color: #ff6a00;
+}
+
+/* ========================
+   Responsividad
+   ======================== */
+@media (max-width: 768px) {
+  .af-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .chip, .af-search, .actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+}

@@ -1,0 +1,94 @@
+:root {
+  --brand:#ff6a00; 
+  --brand-hover: #e65c00;
+  --text: #222;
+  --muted: #666;
+  --bg: #fafafa;
+  --card-bg: #fff;
+  --radius: 10px;
+  --shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* Links */
+a {
+  color: var(--brand);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: var(--brand-hover);
+  text-decoration: underline;
+}
+
+/* Imágenes fluidas */
+img, svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Botones genéricos */
+button {
+  font-family: inherit;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border-radius: var(--radius);
+  border: none;
+  transition: all 0.2s ease;
+}
+
+/* Inputs y selects */
+input, select, textarea {
+  font-family: inherit;
+  font-size: 0.95rem;
+  border-radius: var(--radius);
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px rgba(255,106,0,0.15);
+}
+
+/* Scrollbar moderno */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Layout global */
+.app-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}

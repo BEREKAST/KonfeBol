@@ -1,0 +1,65 @@
+/* ====== Header estilo marketplace (tipo InfoCasas) ====== */
+.ic-header{
+  position: sticky; top:0; z-index:100;
+  display:flex; align-items:center; gap:24px;
+  padding:10px 20px; background:#fff;
+  border-bottom:1px solid #eaeaea;
+}
+
+.ic-brand{ display:flex; align-items:center; }
+.ic-brand__link{ display:flex; align-items:center; gap:6px; text-decoration:none; }
+.ic-brand__logo{ font-weight:800; font-size:1.35rem; color:#ff6a00; letter-spacing:-.2px; }
+.ic-brand__logo--light{ font-weight:800; font-size:1.35rem; color:#3b3b3b; }
+.ic-brand__mark{
+  display:inline-block; width:18px; height:18px;
+  border:2px solid #ff6a00; border-radius:4px; margin-left:4px;
+}
+
+/* Nav */
+.ic-nav{ display:flex; align-items:center; gap:22px; flex:1; }
+.ic-nav__link{
+  color:#2b2b2b; text-decoration:none; font-weight:600; font-size:.98rem;
+  padding:8px 2px; position:relative;
+}
+.ic-nav__link:hover{ color:#ff6a00; }
+.ic-nav__link.is-active{ color:#ff6a00; }
+.ic-nav__link.is-active::after{
+  content:''; position:absolute; left:0; right:0; bottom:-9px;
+  height:3px; border-radius:3px; background:#ff6a00;
+}
+
+/* Acciones derecha */
+.ic-actions{ display:flex; align-items:center; gap:16px; }
+.ic-actions__link{
+  color:#1f4d8a; text-decoration:none; font-weight:700;
+}
+.ic-actions__link:hover{ text-decoration:underline; }
+
+/* Botón CTA naranja */
+.ic-btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:8px 14px; border-radius:10px; font-weight:700; font-size:.95rem;
+  text-decoration:none; border:1px solid transparent; cursor:pointer;
+  transition:filter .2s ease, transform .02s;
+}
+.ic-btn--solid{ background:#ff6a00; color:#fff; border-color:#ff6a00; }
+.ic-btn--solid:hover{ filter:brightness(.95); }
+.ic-btn:active{ transform:translateY(1px); }
+
+/* Usuario compacto */
+.ic-user{ color:#555; font-size:.92rem; }
+
+/* Contenedor general del main para alinear con header */
+.app-main{ max-width:1200px; margin:0 auto; padding:16px; }
+
+/* ====== Responsivo ====== */
+@media (max-width: 900px){
+  .ic-header{ flex-wrap:wrap; gap:12px; }
+  .ic-nav{ order:3; width:100%; gap:16px; border-top:1px solid #eee; padding-top:8px; }
+  .ic-actions{ margin-left:auto; gap:10px; }
+}
+@media (max-width: 520px){
+  .ic-actions{ width:100%; justify-content:space-between; }
+  .ic-btn{ padding:8px 12px; }
+  .ic-actions__link{ font-size:.9rem; }
+}
